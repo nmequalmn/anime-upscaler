@@ -6,9 +6,10 @@ import platform
 from moviepy.editor import *
 
 FPS = 25
-INPUT = 'input.mov'
+INPUT = 'input.mp4'
 OUTPUT = 'output.mp4'
 SCALE = 2
+OS = platform.system()
 
 vidcap = cv2.VideoCapture(INPUT)
 
@@ -34,8 +35,14 @@ while success:
 
 input = ffmpeg.input('./output/frame_out_%d.jpg').filter('fps',fps=FPS).output('out_temp.mp4')
 input.run()
-os.system('rm -r input_images')
-os.system('rm -r output')
 video = VideoFileClip('out_temp.mp4',audio=True)
 video.set_audio(VideoFileClip(INPUT).audio).write_videofile(OUTPUT,fps=FPS, audio_codec="aac")
-os.system('rm out_temp.mp4')
+
+if OS != 'Windows':
+    os.system('rm -r input_images')
+    os.system('rm -r output')
+    os.system('rm out_temp.mp4')
+else:
+    os.system('rd -r input_images')
+    os.system('rd -r output')
+    os.system('rd out_temp.mp4')
