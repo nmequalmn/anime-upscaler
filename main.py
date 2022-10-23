@@ -5,13 +5,17 @@ import ffmpeg
 import platform
 from moviepy.editor import *
 
-FPS = 25
-INPUT = 'input.mp4'
-OUTPUT = 'output.mp4'
-SCALE = 2
+print('------ Path To Your Input File Name ------', sep='')
+INPUT = input()
+print('------ Path To Output File Name ------', sep='')
+OUTPUT = input()
+print('------ UpScale Rate(2/4) ------', sep='')
+SCALE = int(input())
+
 OS = platform.system()
 
 vidcap = cv2.VideoCapture(INPUT)
+FPS = vidcap.get(cv2.CAP_PROP_FPS)
 
 os.system('mkdir input_images')
 os.system('mkdir output')
@@ -24,7 +28,7 @@ while success:
     cv2.imwrite("input_images/frame_%d.jpg" % count, image)
     k = (image-last).sum()/(image.sum()+last.sum())
     if k>=0.00001 or count == 0:
-        os.system(f'./realesrgan-ncnn-vulkanss -i ./input_images/frame_{count}.jpg -o ./output/frame_out_{count}.jpg -s {SCALE}')
+        os.system(f'realesrgan-ncnn-vulkan -i ./input_images/frame_{count}.jpg -o ./output/frame_out_{count}.jpg -s {SCALE}')
     else:
         os.system(f'cp ./output/frame_out_{count-1}.jpg ./output/frame_out_{count}.jpg')
     print('Saved and decoded image ', count)
