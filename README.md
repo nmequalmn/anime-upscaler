@@ -77,10 +77,7 @@
 ### Installation (Установка репозитория)
 <p id="installation"> </p>
 
-Clone the repo (Клонирование репозитория)
-   ```sh
-   git clone https://github.com/nmequalmn/anime-upscaler.git
-   ```
+* Download and unzip archive with latest release (Скачать и распаковать архив последнего релиза): <a href="https://github.com/nmequalmn/anime-upscaler/releases">here.</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
