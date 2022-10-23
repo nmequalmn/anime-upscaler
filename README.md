@@ -66,8 +66,7 @@
 <p id="prerequisites"> </p>
 
 * <a href="https://www.python.org/downloads/">Install Python (Установить Python)</a>
-* Install FFmpeg (Установка FFmpeg) 
-</br>
+* Install FFmpeg (Установка FFmpeg): 
 <a href="https://www.geeksforgeeks.org/how-to-install-ffmpeg-on-windows/">Windows</a> | <a href="http://jollejolles.com/install-ffmpeg-on-mac-os-x/">macOS</a>
 
 * Installing libraries (Установка библиотек)
