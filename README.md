@@ -90,14 +90,12 @@ Clone the repo (Клонирование репозитория)
 ## Usage (Использование)
 <p id="usage"> </p>
 
- 1. Run main.py (Запустите main.py)
+1. Run main.py (Запустите main.py)
     ```sh
     python main.py
     ```
- 2. Type Input Data (Введите входные данные)
- </br>
-
-    <img style="width: 400px;" src="./example_input.png"/>
+2. Type Input Data (Введите входные данные) </br>
+<img style="width: 400px;" src="./example_input.png"/>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
