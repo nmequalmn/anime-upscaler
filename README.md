@@ -94,8 +94,15 @@ Clone the repo (Клонирование репозитория)
     ```sh
     python main.py
     ```
-2. Type Input Data (Введите входные данные) </br>
-<img style="width: 400px;" src="./example_input.png"/>
+2. Type Input Data (Введите входные данные). Example:
+    ```sh
+    ------ Path To Your Input File Name ------
+    ./example_input.mp4  
+    ------ Path To Output File Name ------
+    ./example_output.mp4
+    ------ UpScale Rate(2/4) ------
+    2
+    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
