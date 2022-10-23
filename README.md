@@ -69,6 +69,7 @@
 * Install FFmpeg (Установка FFmpeg) 
 </br>
 <a href="https://www.geeksforgeeks.org/how-to-install-ffmpeg-on-windows/">Windows</a> | <a href="http://jollejolles.com/install-ffmpeg-on-mac-os-x/">macOS</a>
+
 * Installing libraries (Установка библиотек)
   ```sh
   pip install opencv-python numpy ffmpeg moviepy
