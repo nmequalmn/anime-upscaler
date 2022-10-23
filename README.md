@@ -26,11 +26,9 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-
-<img style="width: 100%;" src="https://abrakadabra.fun/uploads/posts/2021-12/1640384467_16-abrakadabra-fun-p-banner-profilya-anime-18.jpg"/>
 <!-- PROJECT LOGO -->
-<br />
 <div align="center">
+<img style="width: 100%;" src="https://abrakadabra.fun/uploads/posts/2021-12/1640384467_16-abrakadabra-fun-p-banner-profilya-anime-18.jpg"/>
 <h3 align="center">Anime UpScaler Script v0.1</h3>
 
   <p align="center">
