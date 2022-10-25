@@ -11,6 +11,22 @@ print('------ Path To Output File Name ------', sep='')
 OUTPUT = input()
 print('------ UpScale Rate(2/4) ------', sep='')
 SCALE = int(input())
+print('------ Model(1 - RealESRGAN, 2 - waifu2x, 3 - RealCUGAN) ------', sep='')
+MODEL = int(input())
+
+# check inputs
+
+if INPUT == '':
+    INPUT='input.mp4'
+    
+if OUTPUT == '':
+    OUTPUT='out.mp4'
+
+if MODEL not in [1,2,3]:
+    MODEL=2
+
+if SCALE not in [2,4]:
+    SCALE=2
 
 OS = platform.system()
 
@@ -27,8 +43,13 @@ count = 0
 while success:
     cv2.imwrite("input_images/frame_%d.jpg" % count, image)
     k = (image-last).sum()/(image.sum()+last.sum())
-    if k>=0.00001 or count == 0:
-        os.system(f'realesrgan-ncnn-vulkan -i ./input_images/frame_{count}.jpg -o ./output/frame_out_{count}.jpg -s {SCALE}')
+    if k>=0.0001 or count == 0:
+        if(MODEL == 1):
+            os.system(f'realesrgan-ncnn-vulkan -i ./input_images/frame_{count}.jpg -o ./output/frame_out_{count}.jpg -s {SCALE}')
+        if(MODEL == 2):
+            os.system(f'waifu2x-ncnn-vulkan -i ./input_images/frame_{count}.jpg -o ./output/frame_out_{count}.jpg -s {SCALE}')
+        if(MODEL == 3):
+            os.system(f'realcugan-ncnn-vulkan -i ./input_images/frame_{count}.jpg -o ./output/frame_out_{count}.jpg -s {SCALE}')
     else:
         os.system(f'cp ./output/frame_out_{count-1}.jpg ./output/frame_out_{count}.jpg')
     print('Saved and decoded image ', count)

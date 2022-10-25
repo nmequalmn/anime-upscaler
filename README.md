@@ -29,7 +29,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
 <img style="width: 100%;" src="https://abrakadabra.fun/uploads/posts/2021-12/1640384467_16-abrakadabra-fun-p-banner-profilya-anime-18.jpg"/>
-<h3 align="center">Anime UpScaler Script v0.1</h3>
+<h3 align="center">Anime UpScaler Script v0.2</h3>
 
   <p align="center">
     ENG: Simple script to upscale anime video with Neural Network.
@@ -99,6 +99,8 @@
     ./example_output.mp4
     ------ UpScale Rate(2/4) ------
     2
+    ------ Model(1 - RealESRGAN, 2 - waifu2x, 3 - RealCUGAN) ------
+    2
     ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -111,6 +113,8 @@
 
 #### 1. <a href="https://github.com/xinntao/Real-ESRGAN-ncnn-vulkan">Real-ESRGAN-ncnn-vulkan (адаптированная нейронка).</a>
 #### 2. <a href="https://github.com/othneildrew/Best-README-Template">Best-README-Template (шаблон readme). </a> 
+#### 3. <a href="https://github.com/nihui/waifu2x-ncnn-vulkan">waifu2x-ncnn-vulkan (адаптированная нейронка).</a>
+#### 4. <a href="https://github.com/nihui/realcugan-ncnn-vulkan">realcugan-ncnn-vulkan (адаптированная нейронка).</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
